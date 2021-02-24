@@ -1,0 +1,17 @@
+<h1>Contacts</h1>
+<table cellpadding=5 cellspacing=5>
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>Email</td>
+      <td>Tags</td>
+    </tr>
+  </thead>
+  <% @people.each do |person| %>
+  <tr>
+    <td><%= person.fullname %></td>
+    <td><%= person.email %></td>
+    <td><%= person.tags.join(', ') %></td>
+  </tr>
+  <% end %>
+</table>

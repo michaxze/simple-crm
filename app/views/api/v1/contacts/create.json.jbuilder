@@ -1,0 +1,5 @@
+if @person.persisted?
+  json.fullname @person.fullname
+  json.email    @person.email
+  json.tags     @person.tags.join(',')
+end
